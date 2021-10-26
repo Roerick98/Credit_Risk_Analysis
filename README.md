@@ -1,1 +1,18 @@
-# Credit_Risk_Analysis
+# Credit Risk Analysis
+## Overview
+Credit risk is a very tough subject to predict, as there are many factors that determine whether someone's credit might pose a risk to their bank. Therefore, it is this project's intention to analyze these factors and conclude which comprise the most weight that determines this risk. One method that data scientists currently incorporate into analysis supervised learning, a category of machine learning. This consists of creating a model based off of labeled data, splitting and training this model with that data, then finally testing it with a certain minor portion of the initial data. In this specific project we are using scikit-learn and imbalanced-learn libraries to build models and evalute them using a resampling method. In the first couple of models I oversampled the data using randomoversampler and smote algorithms and undersample the data with the clustercentroid algorithm. In the remaining models I used a combination approach to over and undersample the data using smoteenn. Finally, I compared two machine learning models that minimize bias, easyensembleclassifier and balancedrandomforestclassifier.
+## Results
+- Naive Random Sampling was seen to produce a model with a very low precise detection rate for high risk credit at about 1% and an average recall rate for high risk credit at about 69%. It should be noted that the accuracy score for Naive Sampling was found to be about 64.7% for this specific sample. <br />
+![Naive_Random_OverSampling](https://user-images.githubusercontent.com/35403433/138806765-fcf1f83b-ab32-440f-a2d8-d96b3b95c9e6.png) <br />
+- SMOTE Oversampling produced a model that had the same precision detection rate for high risk credit at 1% and a recall rate for high risk credit at 63%. SMOTE sampling produced an accuracy score of about 66.2%. <br />
+![Smote_OverSampling](https://user-images.githubusercontent.com/35403433/138807083-c48097f1-94fb-43a1-8254-9b7e2b7231a6.png) <br />
+- Undersampling produced a model that also had a precision detection rate for high risk credit at 1% and a recall for high risk credit at 69%. Undersampling also produced an accuracy score of about 54.4%. <br />
+![UnderSampling](https://user-images.githubusercontent.com/35403433/138807607-93b964fa-c113-496b-82e7-9e0de5c29dca.png) <br />
+- SMOTEENN sampling produced a model that also had a low precision detection rate for high risk credit at 1% and a recall for high risk credit at 78%. SMOTEENN also produced an accuracy score of about 67.8%. <br />
+![Smoteen](https://user-images.githubusercontent.com/35403433/138808255-1d36c70f-2410-4641-80e0-079646656111.png) <br />
+- The Random Forest algorith produced a model that had a slightly higher precision detection rate for high risk credits at 3% and a recall for high risk credit at 67%. The Random Forest algorithm also produced an accuracy score of about 77.9%. <br />
+![Random_Forest](https://user-images.githubusercontent.com/35403433/138808849-8ce2c70a-4d14-4f68-858b-370f3972f8fd.png) <br />
+- The AdaBoost algorithm produced the highest precision detection rate for high risk credit at 9% and the highest recall for high risk credit at 92%. It also produced the highest accuracy score at about 93.2%.
+![AdaBoost](https://user-images.githubusercontent.com/35403433/138809023-f244a85a-5c99-4b02-878d-d3ca86a3b1ea.png) <br />
+## Summary
+- In conclusion, although the first four algorithms designed to manipulate the balance of sample groups produced adequate recall rates, they failed to yield sufficient precision rates. The Random Forest algorithm was a step in the right direction, producing slightly higher precision and recall rates. Finally, the AdaBoost algorithm produced a model that yielded the highest precision and recall rates. It also produced the highest accuracy score, signifying that this model would be the most promising to predict future credit risks.
